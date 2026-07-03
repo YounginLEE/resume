@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이영인 이력서</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fff; }
+  .resume { max-width: 780px; margin: 0 auto; font-family: 'Noto Sans KR', sans-serif; font-size: 13px; line-height: 1.75; color: #1a1a1a; }
+
+  .header { background: #E6F1FB; padding: 2rem 2.5rem 1.8rem; }
+  .header h1 { font-size: 28px; font-weight: 500; margin-bottom: 0.25rem; }
+  .header .subtitle { font-size: 12.5px; color: #185FA5; font-weight: 500; letter-spacing: 0.5px; margin-bottom: 0.9rem; }
+  .header .intro { font-size: 13px; line-height: 1.85; margin-bottom: 0.9rem; }
+  .header .intro p { margin-bottom: 0.25rem; }
+  .header .contact { font-size: 12px; color: #185FA5; display: flex; justify-content: space-between; align-items: center; }
+  .header .contact .date-tag { font-size: 11.5px; color: #5BA4D4; }
+
+  .body { padding: 1.8rem 2.5rem; }
+
+  .section { margin-bottom: 2rem; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; margin-bottom: 1rem; border-bottom: 1.5px solid #5BA4D4; padding-bottom: 0.35rem; }
+  .section-num { font-size: 13px; font-weight: 500; color: #5BA4D4; }
+  .section-name { font-size: 16px; font-weight: 500; color: #1a1a1a; letter-spacing: -0.2px; }
+
+  .field-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .field-table th { background: #E6F1FB; color: #185FA5; font-weight: 500; padding: 6px 12px; text-align: left; font-size: 12px; }
+  .field-table td { padding: 5px 12px; border-bottom: 0.5px solid #e0e0e0; vertical-align: top; }
+  .field-table td:first-child { font-weight: 500; white-space: nowrap; width: 110px; }
+  .field-table td:last-child { color: #555; }
+
+  .strength-block { margin-bottom: 0.8rem; padding: 0.8rem 1rem; background: #f7f9fc; border-radius: 6px; border-left: 3px solid #5BA4D4; }
+  .strength-title { font-size: 13px; font-weight: 500; color: #185FA5; background: #E6F1FB; display: inline-block; padding: 2px 8px; border-radius: 3px; margin-bottom: 0.45rem; }
+  .strength-list { padding-left: 1rem; }
+  .strength-list li { font-size: 12.5px; color: #555; margin-bottom: 0.1rem; }
+
+  .highlight-list { list-style: none; padding: 0; }
+  .highlight-list li { display: flex; align-items: baseline; gap: 8px; padding: 0.35rem 0; border-bottom: 0.5px solid #e0e0e0; font-size: 13px; flex-wrap: wrap; }
+  .highlight-list li:last-child { border-bottom: none; }
+  .highlight-org { font-weight: 500; min-width: 200px; }
+  .highlight-role { font-size: 12px; color: #185FA5; background: #E6F1FB; padding: 1px 7px; border-radius: 3px; white-space: nowrap; }
+
+  .edu-item { margin-bottom: 1.4rem; padding-bottom: 1.4rem; border-bottom: 0.5px solid #e0e0e0; }
+  .edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .edu-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem; }
+  .edu-title { font-size: 14px; font-weight: 500; }
+  .edu-date { font-size: 12px; color: #777; white-space: nowrap; margin-left: 1rem; }
+  .edu-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 0.6rem; flex-wrap: wrap; }
+  .role-badge { font-size: 11.5px; background: #E6F1FB; color: #185FA5; padding: 1px 8px; border-radius: 3px; font-weight: 500; }
+  .target-text { font-size: 12px; color: #777; }
+
+  .sub-label-lg { font-size: 13px; font-weight: 500; color: #185FA5; margin: 0.7rem 0 0.3rem; border-left: 2.5px solid #5BA4D4; padding-left: 7px; }
+  .sub-label-sm { font-size: 12px; color: #777; font-weight: 500; margin: 0.5rem 0 0.2rem; padding-left: 4px; }
+
+  .tool-tag { font-size: 11.5px; color: #185FA5; background: #E6F1FB; display: inline-block; padding: 1px 7px; border-radius: 3px; margin-bottom: 0.4rem; }
+
+  .detail-list { padding-left: 1rem; }
+  .detail-list li { font-size: 12.5px; color: #555; margin-bottom: 0.1rem; }
+  .detail-list .sub-list { list-style: none; padding-left: 1rem; margin-top: 0.15rem; }
+  .detail-list .sub-list li { font-size: 12px; color: #777; }
+  .detail-list .sub-list li::before { content: '–'; margin-right: 5px; color: #aaa; }
+
+  .org-header { display: flex; justify-content: space-between; align-items: center; background: #E6F1FB; padding: 0.5rem 0.9rem; border-radius: 5px; margin-bottom: 0.8rem; }
+  .org-name { font-size: 14.5px; font-weight: 500; color: #0C447C; }
+  .org-date { font-size: 12px; color: #185FA5; }
+
+  .proj-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid #e0e0e0; padding-left: 0.8rem; }
+  .proj-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .proj-title { font-size: 13px; font-weight: 500; color: #185FA5; margin-bottom: 0.4rem; border-left: 2.5px solid #5BA4D4; padding-left: 7px; }
+  .proj-num { color: #5BA4D4; margin-right: 3px; }
+
+  .edu-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .edu-table th { background: #E6F1FB; color: #185FA5; font-weight: 500; padding: 6px 10px; text-align: left; font-size: 12px; }
+  .edu-table td { padding: 6px 10px; border-bottom: 0.5px solid #e0e0e0; }
+
+  /* 수상/자격 */
+  .award-item { display: flex; align-items: baseline; gap: 10px; padding: 0.35rem 0; border-bottom: 0.5px solid #e0e0e0; font-size: 13px; }
+  .award-item:last-child { border-bottom: none; }
+  .award-year { color: #185FA5; font-size: 12px; font-weight: 500; min-width: 55px; }
+  .award-detail { flex: 1; }
+  .award-name { font-weight: 500; }
+  .award-org { font-size: 12px; color: #777; display: block; margin-top: 1px; }
+</style>
+</head>
+<body>
+<div class="resume">
+
+  <div class="header">
+    <h1>이영인</h1>
+    <div class="subtitle">AI 강사 · AI 연구원 · 데이터 사이언티스트</div>
+    <div class="intro">
+      <p>경희대 뇌과학 석사, 서울아산병원 AI 연구원 출신.</p>
+      <p>AI 연구·개발·교육 현장을 모두 경험했으며, Python · AI 기초부터 Agentic AI · 바이브 코딩까지 교육 가능한 AI 강사.</p>
+      <p>수강생이 AI를 현업에 적용하여 실질적인 성과를 만들 수 있도록 돕는 동시에,<br>단순한 도구 사용법에 그치지 않고 기본 원리와 사고방식을 함께 전달하여 교육 이후에도 스스로 학습하고 응용할 수 있도록 돕습니다.</p>
+    </div>
+    <div class="contact"><span>Email: leeyi.yy@gmail.com</span><span class="date-tag">2026. 07 기준</span></div>
+  </div>
+
+  <div class="body">
+
+    <!-- 1. 강의 가능 분야 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">1.</span><span class="section-name">강의 가능 분야</span></div>
+      <table class="field-table">
+        <thead><tr><th>분야</th><th>주요 내용</th></tr></thead>
+        <tbody>
+          <tr><td>Python</td><td>Python 기초, 데이터 처리, 프로그래밍</td></tr>
+          <tr><td>데이터 분석</td><td>Pandas, 시각화, EDA</td></tr>
+          <tr><td>머신러닝</td><td>지도학습, 비지도학습</td></tr>
+          <tr><td>딥러닝</td><td>DNN, CNN, NLP, Transformer</td></tr>
+          <tr><td>생성형 AI</td><td>ChatGPT, Claude, Copilot, Prompt Engineering</td></tr>
+          <tr><td>AI Agent</td><td>Agent 설계, Multi-Agent, Tool Calling, RAG</td></tr>
+          <tr><td>바이브 코딩</td><td>Cursor, Claude Code, Codex, AI 기반 개발 워크플로우</td></tr>
+          <tr><td>프로젝트</td><td>AI 서비스 기획, MVP 설계, 프로젝트 멘토링</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2. 핵심 강점 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">2.</span><span class="section-name">핵심 강점</span></div>
+      <div class="strength-block">
+        <div class="strength-title">AI 연구 · 개발 · 교육 경험을 모두 보유</div>
+        <ul class="strength-list">
+          <li>서울아산병원 AI 연구원</li>
+          <li>SCI 저널 공동 제1저자 논문 게재 (AI 모델 설계 및 개발 단독 수행)</li>
+          <li>기업 교육 주강사 · 프로젝트 멘토 · 실습 코치 경험</li>
+        </ul>
+      </div>
+      <div class="strength-block">
+        <div class="strength-title">AI 기초부터 최신 AI 기술까지 폭넓은 교육 경험</div>
+        <ul class="strength-list">
+          <li>Python · AI 기초부터 Agentic AI · 바이브 코딩까지 교육 가능</li>
+        </ul>
+      </div>
+      <div class="strength-block">
+        <div class="strength-title">초보자부터 전문가까지 아우르는 강의</div>
+        <ul class="strength-list">
+          <li>비전공자 출신으로 AI 연구원 · SCI 논문 저자까지 성장한 경험 보유</li>
+          <li>초보자가 어려워하는 지점을 잘 이해하고, 어려운 개념도 누구나 이해할 수 있도록 쉽게 설명</li>
+          <li>단순한 도구 사용법에 그치지 않고, 기본 원리와 사고방식을 함께 전달</li>
+          <li>교육 과정에서 끝나지 않고, 수강생이 AI를 현업에 적용하며 스스로 성장할 수 있도록 돕는 교육 지향</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3. 주요 교육 실적 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">3.</span><span class="section-name">주요 교육 실적</span></div>
+      <ul class="highlight-list">
+        <li><span class="highlight-org">경동제약 AI 프로젝트 과정</span><span class="highlight-role">주강사 · 프로젝트 멘토 (예정)</span></li>
+        <li><span class="highlight-org">보라매병원 핵심인재 AI 프로젝트 과정</span><span class="highlight-role">주강사 · 프로젝트 멘토</span></li>
+        <li><span class="highlight-org">에스원 AI 역량 강화 과정</span><span class="highlight-role">실습 코치 · 프로젝트 멘토</span></li>
+        <li><span class="highlight-org">삼성전자 Citizen Developer</span><span class="highlight-role">실습 코치 · 평가 문항 개발</span></li>
+        <li><span class="highlight-org">삼성전자 DX AI Essential Plus</span><span class="highlight-role">실습 코치</span></li>
+        <li><span class="highlight-org">Kakao 데이터 분석 부트캠프</span><span class="highlight-role">실습 코치</span></li>
+        <li><span class="highlight-org">KT AI Campus</span><span class="highlight-role">실습 코치</span></li>
+      </ul>
+    </div>
+
+    <!-- 4. 교육 경력 상세 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">4.</span><span class="section-name">교육 경력 상세</span></div>
+
+      <!-- 경동제약 -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">경동제약 AI 프로젝트 과정</div><div class="edu-date">2026.08 ~ 2026.09 (예정)</div></div>
+        <div class="edu-meta"><span class="role-badge">주강사 · 프로젝트 멘토</span><span class="target-text">대상: 경동제약 임직원</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: ChatGPT, GPTs, Codex</div>
+        <ul class="detail-list">
+          <li>업무 자동화, 챗봇 구축, AI Agent 구축</li>
+        </ul>
+      </div>
+
+      <!-- 보라매병원 -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">보라매병원 핵심인재 AI 프로젝트 과정</div><div class="edu-date">2026.07</div></div>
+        <div class="edu-meta"><span class="role-badge">주강사 · 프로젝트 멘토</span><span class="target-text">대상: 보라매병원 핵심 인재</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: ChatGPT, GPTs, Codex</div>
+        <ul class="detail-list">
+          <li>업무 자동화, 챗봇 구축, AI Agent 구축</li>
+          <li>총 4차수동안 기획 및 구현</li>
+          <li>팀 프로젝트 운영</li>
+          <li>성과발표회 준비</li>
+        </ul>
+        <div class="sub-label-lg">특이사항</div>
+        <ul class="detail-list">
+          <li>수료자 대상 원내 AI 인재 위촉 및 원내 강사 활동 기회 제공</li>
+          <li>현업 업무 프로세스를 분석하여 AI 기반 서비스 기획 및 개발</li>
+        </ul>
+      </div>
+
+      <!-- 에스원 -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">에스원 AI 역량 강화 과정</div><div class="edu-date">2026.05 ~ 현재</div></div>
+        <div class="edu-meta"><span class="role-badge">실습 코치 · 프로젝트 멘토</span><span class="target-text">대상: 에스원 핵심 인재</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: Claude Platform (Chat · Cowork · Code · Design), Claude API, OpenAI API (Embedding)</div>
+        <ul class="detail-list">
+          <li>현업 업무 프로세스 분석 기반 AI 웹 서비스 기획 및 개발 지도 (RAG · 챗봇 · Agent)</li>
+          <li>기획 → 개발 → 경진대회 발표까지 전 과정 팀별 멘토링 및 기술 자문</li>
+        </ul>
+        <div class="sub-label-lg">특이사항</div>
+        <ul class="detail-list">
+          <li>교육 과정에서 개발한 AI 서비스를 사내 실무에 도입 예정</li>
+          <li>사장 및 임원진이 참석하는 경진대회 발표 진행</li>
+        </ul>
+      </div>
+
+      <!-- 삼성전자 DX -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">삼성전자 DX AI Essential Plus</div><div class="edu-date">2026.03 ~ 현재</div></div>
+        <div class="edu-meta"><span class="role-badge">실습 코치</span><span class="target-text">대상: 삼성전자 DX S/W 개발자</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: Python, Jupyter Notebook, LangChain, OpenAI API, vLLM, Unsloth, Cloud VM (Public IP 기반 원격 실습 환경)</div>
+        <ul class="detail-list">
+          <li>End-to-End AI 서비스 프로토타입 설계·구현</li>
+          <li>Multi-Agent · RAG 설계 및 구현</li>
+          <li>LoRA 기반 모델 파인튜닝 및 Quantization 실습</li>
+          <li>Qwen · Llama 계열 LLM 및 VLM(SigLIP2) 활용 실습</li>
+        </ul>
+      </div>
+
+      <!-- KT -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">KT AI Campus</div><div class="edu-date">2025.09 ~ 2025.12</div></div>
+        <div class="edu-meta"><span class="role-badge">실습 코치</span><span class="target-text">대상: KT 임직원 및 KT AI Campus 수강생</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: Cursor, Supabase, Copilot, Power Automate, Teams</div>
+        <ul class="detail-list">
+          <li>AI Agent, 웹 서비스</li>
+          <li>개인 프로젝트 멘토링</li>
+          <li>강사 양성과정 모의 강의 피드백</li>
+        </ul>
+      </div>
+
+      <!-- Kakao -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">Kakao 데이터 분석 부트캠프</div><div class="edu-date">2023.12 ~ 2024.01</div></div>
+        <div class="edu-meta"><span class="role-badge">실습 코치</span><span class="target-text">대상: Kakao 임직원</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: Python, Colab, Pandas, BeautifulSoup4, Selenium, Matplotlib, Seaborn, Plotly</div>
+        <ul class="detail-list">
+          <li>데이터 분석·시각화 및 웹 크롤링</li>
+          <li>프로젝트 피드백</li>
+        </ul>
+        <div class="sub-label-lg">특이사항</div>
+        <ul class="detail-list">
+          <li>크롤링 실습 콘텐츠 전면 개편
+            <ul class="sub-list">
+              <li>온라인 강의 전체 및 Jupyter Notebook 실습 파일 5종 전수 검토</li>
+              <li>로컬 환경 기준 강의 콘텐츠를 Colab 환경에 맞게 전환</li>
+              <li>웹 페이지 구조 변경 및 라이브러리 버전 차이에 대응하여 크롤링 예제 수정 및 실습 내용 보강</li>
+              <li>강의와의 차이점을 주석으로 명시하여 수강생 혼선 최소화</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 삼성전자 Citizen Developer -->
+      <div class="edu-item">
+        <div class="edu-header"><div class="edu-title">삼성전자 Citizen Developer</div><div class="edu-date">2023.03 ~ 2023.11</div></div>
+        <div class="edu-meta"><span class="role-badge">실습 코치 · 평가 문항 개발</span><span class="target-text">대상: 삼성전자 임직원</span></div>
+        <div class="sub-label-lg">주요 내용</div>
+        <div class="tool-tag">사용 도구: Python, Jupyter Notebook, Pandas, Matplotlib, Scikit-learn, XGBoost, LightGBM, TensorFlow, Keras</div>
+        <ul class="detail-list">
+          <li>Python 기초, 데이터 분석, 머신러닝, 딥러닝, 업무 자동화</li>
+        </ul>
+        <div class="sub-label-lg">특이사항</div>
+        <ul class="detail-list">
+          <li>일 최대 70건 이상의 수강생 질의응답 대응</li>
+          <li>Python · 데이터 분석 · 머신러닝 · 딥러닝 과정 평가 문항 출제 및 검수
+            <ul class="sub-list">
+              <li>신규 문항 출제 (100여 문항), 기존 문제은행 전수 검수 (350여 문항)</li>
+              <li>5개월간 매주 평가 문항 구성</li>
+            </ul>
+          </li>
+          <li>수강생 프로젝트 채점</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. 연구·개발 경력 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">5.</span><span class="section-name">연구 · 개발 경력</span></div>
+      <div class="org-header">
+        <span class="org-name">서울아산병원 AI 연구원</span>
+        <span class="org-date">2018.11 ~ 2020.11</span>
+      </div>
+
+      <div class="sub-label-lg">주요 업무</div>
+      <ul class="detail-list" style="margin-bottom:0.6rem">
+        <li>의료 AI 모델 연구 및 개발</li>
+        <li>MRI 기반 질환 진단 모델 개발</li>
+        <li>의료 데이터 전처리, 분석 및 통계 모델링</li>
+        <li>웹 기반 AI 서비스 개발</li>
+        <li>SCI 논문 연구 수행 및 게재</li>
+      </ul>
+
+      <div class="sub-label-lg">주요 성과</div>
+      <ul class="detail-list" style="margin-bottom:1rem">
+        <li>SCI 저널 공동 제1저자 논문 게재 (AI 모델 설계 및 개발 단독 수행)</li>
+        <li>MRI 및 임상정보 기반 질환 분류 AI 모델 개발</li>
+        <li>연구 결과 기반 End-to-End 웹 서비스 구축</li>
+      </ul>
+
+      <!-- 프로젝트 1 -->
+      <div class="proj-item">
+        <div class="proj-title"><span class="proj-num">프로젝트 1.</span> MRI 및 임상정보 기반 다발성경화증(MS) · 시신경척수염(NMOSD) 감별 진단 AI 모델 개발</div>
+        <div class="sub-label-sm">주요 내용</div>
+        <div class="tool-tag" style="margin-left:0.3rem">사용 도구: Python, Jupyter Notebook, Ubuntu Linux, PyTorch, Scikit-learn, nibabel, nilearn, FSL, SPM, LST</div>
+        <ul class="detail-list">
+          <li>MRI 영상 및 임상정보를 결합한 Multimodal AI 모델 개발</li>
+          <li>MRI 전처리 파이프라인 및 3D Image Augmentation 모듈 설계·개발</li>
+          <li>3D ResNeXt 기반 CNN Architecture 개발</li>
+          <li>모델 설계, 개발, 성능 평가 및 논문 작성 수행</li>
+        </ul>
+        <div class="sub-label-sm">주요 성과</div>
+        <ul class="detail-list">
+          <li>SCI 저널 공동 제1저자 논문 게재
+            <ul class="sub-list">
+              <li>AI 모델 설계 및 개발 단독 수행</li>
+              <li>Deep Learning-Based Method to Differentiate Neuromyelitis Optica Spectrum Disorder From Multiple Sclerosis (Frontiers in Neurology, 2020)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 프로젝트 2 -->
+      <div class="proj-item">
+        <div class="proj-title"><span class="proj-num">프로젝트 2.</span> MS · NMOSD 감별 진단 모델 웹 서비스 개발</div>
+        <div class="sub-label-sm">주요 내용</div>
+        <div class="tool-tag" style="margin-left:0.3rem">사용 도구: Python, Jupyter Notebook, PyTorch, ANTsPy, nipype, nibabel, FSL, Figma, WSL2</div>
+        <ul class="detail-list">
+          <li>Ubuntu 기반 연구 모델을 Windows 환경에서 구동 가능한 추론 파이프라인으로 이식</li>
+          <li>DICOM 입력부터 질환 진단 결과 출력까지 End-to-End 추론 파이프라인 구축</li>
+          <li>외주 개발 업체와 협업하여 웹 서비스 개발 진행</li>
+          <li>Figma를 이용한 UI 디자인</li>
+        </ul>
+        <div class="sub-label-sm">주요 성과</div>
+        <ul class="detail-list">
+          <li>Raw MRI 및 임상 데이터를 입력하면 질환 진단 결과를 제공하는 End-to-End 웹 서비스 개발</li>
+        </ul>
+      </div>
+
+      <!-- 프로젝트 3 -->
+      <div class="proj-item">
+        <div class="proj-title"><span class="proj-num">프로젝트 3.</span> MCI 환자와 정상군의 인지능력점수(Longitudinal Data) 추세 분석</div>
+        <div class="sub-label-sm">주요 내용</div>
+        <div class="tool-tag" style="margin-left:0.3rem">사용 도구: Python, R (CrimCV), SAS (Proc Traj)</div>
+        <ul class="detail-list">
+          <li>인지능력점수(K-MMSE · K-MoCA) 종단 데이터 기반 인지기능 궤적 분석</li>
+          <li>연령·교육년수 보정을 위한 Z-scoring 적용</li>
+          <li>GBTM(Group-Based Trajectory Modeling) 기반 인지기능 궤적 모델링 및 최적 모델 선정</li>
+          <li>Multivariable Logistic Regression 기반 인지기능 저하 관련 임상 인자 분석</li>
+          <li>분석 설계, 데이터 분석, 논문 작성 수행</li>
+        </ul>
+        <div class="sub-label-sm">주요 성과</div>
+        <ul class="detail-list">
+          <li>공동 제1저자 논문 원고 작성 완료
+            <ul class="sub-list">
+              <li>분석 설계 및 데이터 분석 단독 수행</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. 학력 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">6.</span><span class="section-name">학력</span></div>
+      <table class="edu-table">
+        <thead><tr><th>기간</th><th>학교</th><th>학위</th><th>전공</th><th>비고</th></tr></thead>
+        <tbody>
+          <tr><td>2020.03 ~ 2021.02</td><td>울산의과대학</td><td>공학 박사 과정</td><td>의공학</td><td>중퇴</td></tr>
+          <tr><td>2015.03 ~ 2017.02</td><td>경희대학교</td><td>이학 석사</td><td>뇌과학</td><td>졸업</td></tr>
+          <tr><td>2010.03 ~ 2015.02</td><td>경희대학교</td><td>이학 학사</td><td>생물학</td><td>졸업</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 7. 수상 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">7.</span><span class="section-name">수상</span></div>
+      <div class="award-item">
+        <span class="award-year">2020.01</span>
+        <span class="award-detail">
+          <span class="award-name">의료정보 분석 전문가 심화과정 최우수 프로젝트상</span>
+          <span class="award-org">보건복지부 주최, 한국보건복지인력개발원·서울아산병원 주관</span>
+        </span>
+      </div>
+      <div class="award-item">
+        <span class="award-year">2020.03</span>
+        <span class="award-detail">
+          <span class="award-name">아산융합의학원 우수 대학원생</span>
+          <span class="award-org">최고 장학 배정</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- 8. 자격 -->
+    <div class="section">
+      <div class="section-title"><span class="section-num">8.</span><span class="section-name">자격</span></div>
+      <div class="award-item">
+        <span class="award-year">2025.10</span>
+        <span class="award-detail">
+          <span class="award-name">AICE Associate</span>
+          <span class="award-org">국가공인</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
